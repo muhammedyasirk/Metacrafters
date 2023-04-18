@@ -22,7 +22,7 @@ contract MyToken{
     //burn function
     function burn(address sender,uint amount)public
     {
-        if(Balance[sender]>amount)
+        if(Balance[sender]>=amount)
         {
             Balance[sender]-=amount;
             total_supply-=amount;
